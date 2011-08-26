@@ -27,6 +27,34 @@ namespace com.mojang.escape.entities
             this.r = 0.3;
 	    }
 
+        private static bool haveNextNextGaussian = false;
+        private static double nextNextGaussian = 0;
+        private static double NextGaussian()
+        {
+            // Implementation of Java Random.nextGaussian()
+            double res = 0.0;
+            if (haveNextNextGaussian)
+            {
+                haveNextNextGaussian = false;
+                res = nextNextGaussian;
+            }
+            else
+            {
+                double v1, v2, s;
+                do
+                {
+                    v1 = 2 * random.NextDouble() - 1;   // between -1.0 and 1.0
+                    v2 = 2 * random.NextDouble() - 1;   // between -1.0 and 1.0
+                    s = v1 * v1 + v2 * v2;
+                } while (s >= 1 || s == 0);
+                double multiplier = Math.Sqrt(-2 * Math.Log(s) / s);
+                nextNextGaussian = v2 * multiplier;
+                haveNextNextGaussian = true;
+                res = v1 * multiplier;
+            }
+            return res;
+        }
+
 	    public override void tick() {
 		    if (hurtTime > 0) {
 			    hurtTime--;
@@ -38,10 +66,10 @@ namespace com.mojang.escape.entities
 		    sprite.tex = defaultTex + animTime / 10 % 2;
 		    move();
 		    if (xa == 0 || za == 0) {
-			    rota += (random.NextDouble()/* TODO : check nextGaussian() */ * random.NextDouble()) * 0.3;
+			    rota += (NextGaussian() * random.NextDouble()) * 0.3;
 		    }
 
-            rota += (random.NextDouble()/* TODO : check nextGaussian() */ * random.NextDouble()) * spinSpeed;
+            rota += (NextGaussian() * random.NextDouble()) * spinSpeed;
 		    rot += rota;
 		    rota *= 0.8;
 		    xa *= 0.8;
