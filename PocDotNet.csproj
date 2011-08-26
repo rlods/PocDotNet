@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D6DC9737-A531-4455-873B-15A62A694D4A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.mojang.escape</RootNamespace>
+    <AssemblyName>PoC</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="com_mojang_escape_entities\BatBossEntity.cs" />
+    <Compile Include="com_mojang_escape_entities\BatEntity.cs" />
+    <Compile Include="com_mojang_escape_entities\BossOgre.cs" />
+    <Compile Include="com_mojang_escape_entities\BoulderEntity.cs" />
+    <Compile Include="com_mojang_escape_entities\Bullet.cs" />
+    <Compile Include="com_mojang_escape_entities\EnemyEntity.cs" />
+    <Compile Include="com_mojang_escape_entities\Entity.cs" />
+    <Compile Include="com_mojang_escape_entities\EyeBossEntity.cs" />
+    <Compile Include="com_mojang_escape_entities\EyeEntity.cs" />
+    <Compile Include="com_mojang_escape_entities\GhostBossEntity.cs" />
+    <Compile Include="com_mojang_escape_entities\GhostEntity.cs" />
+    <Compile Include="com_mojang_escape_entities\Item.cs" />
+    <Compile Include="com_mojang_escape_entities\KeyEntity.cs" />
+    <Compile Include="com_mojang_escape_entities\OgreEntity.cs" />
+    <Compile Include="com_mojang_escape_entities\Player.cs" />
+    <Compile Include="com_mojang_escape_gui\Bitmap.cs" />
+    <Compile Include="com_mojang_escape_gui\Bitmap3D.cs" />
+    <Compile Include="com_mojang_escape_gui\PoofSprite.cs" />
+    <Compile Include="com_mojang_escape_gui\RubbleSprite.cs" />
+    <Compile Include="com_mojang_escape_gui\Screen.cs" />
+    <Compile Include="com_mojang_escape_gui\Sprite.cs" />
+    <Compile Include="com_mojang_escape_level_block\AltarBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\BarsBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\Block.cs" />
+    <Compile Include="com_mojang_escape_level_block\ChestBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\DoorBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\FinalUnlockBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\IceBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\LadderBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\LockedDoorBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\LootBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\PitBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\PressurePlateBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\SolidBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\SpiritWallBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\SwitchBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\TorchBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\VanishBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\WaterBlock.cs" />
+    <Compile Include="com_mojang_escape_level_block\WinBlock.cs" />
+    <Compile Include="com_mojang_escape_level\CryptLevel.cs" />
+    <Compile Include="com_mojang_escape_level\DungeonLevel.cs" />
+    <Compile Include="com_mojang_escape_level\IceLevel.cs" />
+    <Compile Include="com_mojang_escape_level\Level.cs" />
+    <Compile Include="com_mojang_escape_level\OverworldLevel.cs" />
+    <Compile Include="com_mojang_escape_level\StartLevel.cs" />
+    <Compile Include="com_mojang_escape_level\TempleLevel.cs" />
+    <Compile Include="com_mojang_escape_menu\AboutMenu.cs" />
+    <Compile Include="com_mojang_escape_menu\GotLootMenu.cs" />
+    <Compile Include="com_mojang_escape_menu\InstructionsMenu.cs" />
+    <Compile Include="com_mojang_escape_menu\LoseMenu.cs" />
+    <Compile Include="com_mojang_escape_menu\Menu.cs" />
+    <Compile Include="com_mojang_escape_menu\PauseMenu.cs" />
+    <Compile Include="com_mojang_escape_menu\TitleMenu.cs" />
+    <Compile Include="com_mojang_escape_menu\WinMenu.cs" />
+    <Compile Include="com_mojang_escape\Art.cs" />
+    <Compile Include="com_mojang_escape\EscapeComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="com_mojang_escape\Game.cs" />
+    <Compile Include="com_mojang_escape\Sound.cs" />
+    <Compile Include="com_mojang_escape\EscapeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com_mojang_escape\EscapeForm.Designer.cs">
+      <DependentUpon>EscapeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="com_mojang_escape\EscapeForm.resx">
+      <DependentUpon>EscapeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gamepanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\items.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sprites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\altar.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bosskill.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\click2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crumble.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\death.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hurt2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hurt.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kill.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ladder.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pickup.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\potion.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roll.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoot.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slide.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thud.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treasure.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crypt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dungeon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\overworld.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\temple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
