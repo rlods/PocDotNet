@@ -28,7 +28,7 @@ namespace com.mojang.escape.entities
 	    }
 
         private static bool haveNextNextGaussian = false;
-        private static double nextNextGaussian = 0;
+        private static double nextNextGaussian = 0.0;
         private static double NextGaussian()
         {
             // Implementation of Java Random.nextGaussian()
